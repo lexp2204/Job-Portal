@@ -1,0 +1,13 @@
+#Node.js
+node_modules/
+.env
+
+# Build files
+frontend/build/
+backend/dist/
+
+#Logs
+*.Logs
+
+# OS files
+.DS_Store
