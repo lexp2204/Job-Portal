@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.container{
+    display: flex;
+    gap: 120px;
+}
+
+.hero-txt-container{
+    margin-top: 20vh;
+}
+
+.hero-txt{
+    font-size: 62px;
+    font-weight: 600;
+    font-family:  "DM Sans", sans-serif;
+}
+
+.job-finder-txt{
+    color: #1976D2;
+}
+
+.subheadline{
+    color: #828282;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.img-container{
+    margin-top: 22vh;
+}
+
+.img-container img{
+    width: 350px;
+    height: 350px;
+}
+
+.btn-container{
+    display: flex;
+    gap: 40px;
+}
+
+.login{
+    background-color: #828282;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login:hover {
+    background-color: #6e6e6e;
+}
+
+.signup{
+    background-color: #1976D2;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup:hover {
+    background-color: #1565c0;
+}
+
+.login:hover, .signup:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
