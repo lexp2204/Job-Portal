@@ -1,18 +1,23 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import JobList from './components/JobList';
-import PostJob from './components/PostJob';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
+import Login from "./pages/Login";
+import Register from "./pages/Register"
+import LandingPage from "./pages/Landing";
+import Dashboard from "./pages/Dashboard"
+import "./App.css"
+
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<JobList />} />
-        <Route path="/post" element={<PostJob />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
 }
+
+export default App;

@@ -1,0 +1,44 @@
+.nav-container{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:60px
+}
+
+.nav-btn-container ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-btn-container li a{
+    color: #828282;
+    text-decoration: none;
+}
+
+.nav-btn-container li.signup-btn a {
+    color: #1976D2;
+  }
+
+
+.logo{
+    color: #1976D2;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.login-btn{
+    color: #828282;
+    font-size: 20px;
+    font-weight:500;
+    text-decoration: none;
+}
+
+.signup-btn{
+    color: #1976D2;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
