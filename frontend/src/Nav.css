@@ -22,10 +22,11 @@
   }
 
 
-.logo{
+.logo a{
     color: #1976D2;
     font-size: 25px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .login-btn{
