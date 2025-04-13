@@ -49,6 +49,27 @@ function Register(){
             </div>
         </div>
 
+    <div className="full-container">
+
+        <div className="welcome-card">
+            
+            <p className="welcome">Welcome<br />To </p>
+            <p className="logo1">JobFinder</p>
+            <div className="header-container">
+                <p>Join our community and take the first step towards finding, your dream job!</p>
+            </div>
+            <div className="join-us-container">
+                <p className="why">Why Join Us?</p>
+                <p className="t">🚀 Easy to use</p>
+                <p className="t">📈 Real-time updates</p>
+                <p className="t">💬 Friendly support</p>
+            </div>
+            
+            <p className="quote"><i>"Looking for a new job has never been easier..."</i></p>
+            <p className="qo">-Happy User</p>
+
+        </div>
+        
         <div className="register-card">
             <div className="logo-img-container">
                 <p className="logo1">JobFinder</p>
@@ -62,6 +83,7 @@ function Register(){
                     <button className="signup1" type="submit">Create Account</button>
                 </form>
         </div>
+    </div>
         </>
     )
 }
