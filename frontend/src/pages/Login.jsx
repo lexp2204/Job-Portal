@@ -1,7 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { login } from "../services/api";
+import teamimg from "../assets/team.png"
+import "../Login.css" 
+
+
+
+
 
 function Login(){
+
+    const [user, setUser]= useState({email: '', password: '',});
+    const[error, setError]=useState('');
+    const navigate= useNavigate();
+
+    function handleChange(e){
+        setUser({...user, [e.target.name]: e.target.value})
+    }
+
+    //Function to handle the submit
+    async function handleSubmit(e) {
+        e.preventDefault()
+
+        try{
+            const response= await login(user);
+            console.log(response.data)
+            navigate('/Dashboard');
+        }catch(error){
+            console.error(error.response.data); // Show backend error
+            alert(error.response?.data?.message || "Login failed.");
+        }
+    }
+
     return(
         <>
             <div className="nav-container">
@@ -16,10 +47,15 @@ function Login(){
             </div>
 
             <div className="login-card">
-                <p>Welcome Back!</p>
-                <div className="img-container">
-
+                <p className="logo1">Welcome Back!</p>
+                <div className="img-div">
+                    <img className="team-img" src={teamimg} />
                 </div>
+                <form onSubmit={handleSubmit}>
+                    <input placeholder="Email" name="email" onChange={handleChange} required/>
+                    <input placeholder="Password" type="password" onChange={handleChange} name="password" />
+                    <button className="signup1" type="submit">Sign In</button>
+                </form>
             </div>
 
 

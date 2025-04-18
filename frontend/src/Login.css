@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+}
+.login-card{
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    width:max-content;
+    height: max-content;
+    margin-top: 50px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.login-card:hover{
+    border-color: #1976D2; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    transform: scale(1.02); 
+}
+
+.img-div {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px; 
+}
+
+.img-div .team-img {
+    width: 100px;
+    height: 100px;
+}
+
+
