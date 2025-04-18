@@ -25,8 +25,10 @@ function Login(){
 
         try{
             const response= await login(user);
-            console.log(response.data)
-            navigate('/Dashboard');
+            if (response.status === 200) {
+                localStorage.setItem('token', response.data.token); // Save token
+                window.location.href = '/dashboard'; // redirect
+              }
         }catch(error){
             console.error(error.response.data); // Show backend error
             alert(error.response?.data?.message || "Login failed.");
