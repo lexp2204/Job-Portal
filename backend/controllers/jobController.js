@@ -2,11 +2,11 @@ const pool= require("../db")
 
 //createJob function
 exports.createJob= async(req, res)=>{
-    const {title, description, company, location, salary}= req.body;
+    const {title, description, company, location, salary, link}= req.body;
     try{
         const result= await pool.query(
-            'INSERT INTO jobs (title, description, company, location, salary) VALUES ($1, $2, $3, $4, $5) RETURNING *',
-            [title,description,company,location,salary]
+            'INSERT INTO jobs (title, description, company, location, salary, link) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *',
+            [title,description,company,location,salary,link]
         );
         res.status(201).json(result.rows[0]);
     }catch (err){
@@ -42,11 +42,11 @@ exports.getJobById= async(req, res)=>{
 //updateJob function
 exports.updateJob = async (req, res) => {
     const jobId = req.params.id;
-    const { title, description, company, location, salary } = req.body;
+    const { title, description, company, location, salary, link } = req.body;
     try {
       const result = await pool.query(
-        'UPDATE jobs SET title = $1, description = $2, company = $3, location = $4, salary = $5 WHERE id = $6 RETURNING *',
-        [title, description, company, location, salary, jobId]
+        'UPDATE jobs SET title = $1, description = $2, company = $3, location = $4, salary = $5, link=$6  WHERE id = $7 RETURNING *',
+        [title, description, company, location, salary,link, jobId]
       );
       res.json(result.rows[0]);
     } catch (err) {

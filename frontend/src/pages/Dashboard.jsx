@@ -34,7 +34,7 @@ function Dashboard() {
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
-        <h1>JobFinder Dashboard</h1>
+        <h1>Welcome Back,</h1>
         <button onClick={handleLogout}>Logout</button>
       </div>
 
