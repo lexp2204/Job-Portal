@@ -32,4 +32,38 @@
     height: 100px;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .login-card {
+        width: 80%;
+        padding: 16px;
+    }
 
+    .team-img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 500px) {
+    .login-card {
+        padding: 14px;
+        width: 90%;
+    }
+
+    .team-img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 350px) {
+    .login-card {
+        padding: 12px;
+    }
+
+    .team-img {
+        width: 50px;
+        height: 50px;
+    }
+}

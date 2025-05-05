@@ -71,3 +71,47 @@
 .login:hover, .signup:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .hero-txt-container {
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .hero-txt {
+        font-size: 36px;
+    }
+
+    .subheadline {
+        font-size: 16px;
+    }
+
+    .img-container {
+        margin-top: 0;
+    }
+
+    .img-container img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .login, .signup {
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+    }
+}

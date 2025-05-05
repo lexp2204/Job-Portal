@@ -44,7 +44,6 @@ function Dashboard() {
             <h2>{job.title}</h2>
             <p><strong>Company:</strong> {job.company}</p>
             <p><strong>Location:</strong> {job.location}</p>
-            <p><strong>Type:</strong> {job.type}</p>
             <p>{job.description}</p>
 
             <a

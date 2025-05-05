@@ -1,45 +1,84 @@
-.nav-container{
+.nav-container {
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height:60px
+    padding: 0 2rem;
+    height: 60px;
+    position: relative;
+    z-index: 1000;
 }
 
-.nav-btn-container ul{
-    list-style: none;
-    display: flex;
-    gap: 40px;
-}
-
-.nav-btn-container li a{
-    color: #828282;
-    text-decoration: none;
-}
-
-.nav-btn-container li.signup-btn a {
-    color: #1976D2;
-  }
-
-
-.logo a{
+.logo-container .logo a {
     color: #1976D2;
     font-size: 25px;
     font-weight: bold;
     text-decoration: none;
 }
 
-.login-btn{
-    color: #828282;
-    font-size: 20px;
-    font-weight:500;
-    text-decoration: none;
+/* Main nav buttons */
+.nav-btn-container ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 0;
 }
 
-.signup-btn{
+.nav-btn-container li a {
+    color: #828282;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.signup-btn a {
     color: #1976D2;
-    font-size: 20px;
     font-weight: 500;
 }
 
+/* Hamburger menu hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
 
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-btn-container {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-btn-container.show {
+        display: flex;
+    }
+
+    .nav-btn-container ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-btn-container li a {
+        font-size: 18px;
+    }
+}
