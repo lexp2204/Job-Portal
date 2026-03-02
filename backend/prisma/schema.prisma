@@ -21,3 +21,16 @@ enum Role {
     EMPLOYER
     ADMIN
 }
+
+model Job{
+    id Int @id @default(autoincrement())
+    title String 
+    description String
+    location String
+    salary String?
+    company String
+    createdAt DateTime @default(now())
+
+    employerId Int
+    employer User @relation(fields: [EmployerId], references: [id])
+}
